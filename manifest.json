@@ -1,0 +1,13 @@
+{
+  "name": "AutoPlayAudioExtension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Scrapboxページ内の音声URLを自動再生する",
+  "content_scripts": [
+    {
+      "matches": ["*://scrapbox.io/*"],
+      "js": ["app.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
