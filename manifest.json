@@ -1,13 +1,17 @@
 {
-  "name": "AutoPlayAudioExtension",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "Scrapboxページ内の音声URLを自動再生する",
-  "content_scripts": [
-    {
-      "matches": ["*://scrapbox.io/*"],
-      "js": ["app.js"],
-      "run_at": "document_start"
-    }
-  ]
+    "name": "AutoPlayAudioExtension",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "Scrapboxページ内の音声URLを自動再生する",
+    "icons": {
+	"48": "icons/gyaon-48.png",
+	"96": "icons/gyaon-96.png"
+    },
+    "content_scripts": [
+	{
+	    "matches": ["*://scrapbox.io/*"],
+	    "js": ["app.js"],
+	    "run_at": "document_start"
+	}
+    ]
 }
