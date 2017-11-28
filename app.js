@@ -6,8 +6,6 @@ var audioURL = '';
 // URLが変わったかポーリングする...
 setInterval(() => {
     console.log('interval');
-    console.log(`currentURL=${currentURL}`);
-    console.log(`location.href=${location.href}`);
     if(location.href != currentURL){
 	currentURL = location.href.replace(/\?.*$/,''); // Gyaonの本文を消す
 	if(audioElement){
@@ -19,8 +17,6 @@ setInterval(() => {
 		var audioLink = document.getElementsByClassName('audio-link')[0];
 		if(audioLink){
 		    var newURL = audioLink.firstChild.href;
-		    console.log(`old: ${audioURL}`);
-		    console.log(`new: ${newURL}`);
 		    if(newURL == audioURL) return null;
 		    audioURL = newURL;
 		    clearInterval(audioCheck);
